@@ -16,8 +16,42 @@ declare global {
   }
 }
 
+export type BookPreviewType = {
+  bookData: {
+    kind: string;
+    volumeInfo: {
+      title: string;
+      subtitle: string;
+      authors: [string];
+      publishedDate: string;
+      description: string;
+      industryIdentifiers: [
+        {
+          type: string;
+          identifier: string;
+        }
+      ];
+      pageCount: number;
+      categories: [string];
+      averageRating: number;
+      ratingsCount: number;
+      imageLinks: {
+        smallThumbnail: string;
+        thumbnail: string;
+      };
+      language: string;
+    };
+    searchInfo: {
+      textSnippet: string;
+    };
+  };
+};
+
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  BookPreview: {
+    bookData: BookPreviewType;
+  };
   Modal: undefined;
   NotFound: undefined;
 };
@@ -28,6 +62,7 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
 export type RootTabParamList = {
   AddBook: undefined;
   BookList: undefined;
+  BookPreview: BookPreviewType;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =

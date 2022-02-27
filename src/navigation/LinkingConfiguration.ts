@@ -18,6 +18,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           AddBook: {
             screens: {
               AddBookScreen: "AddBook",
+              BookPreviewScreen: "BookPreview",
             },
           },
           BookList: {

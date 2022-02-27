@@ -1,0 +1,82 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 1,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "dxJSEAAAQBAJ",
+      "etag": "dfthUMRBasU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/dxJSEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Yellow Wife",
+        "subtitle": "A Novel",
+        "authors": [
+          "Sadeqa Johnson"
+        ],
+        "publisher": "Simon and Schuster",
+        "publishedDate": "2021-12-28",
+        "description": "Called “wholly engrossing” by New York Times bestselling author Kathleen Grissom, this “fully immersive” (Lisa Wingate, #1 bestselling author of Before We Were Yours) story follows an enslaved woman forced to barter love and freedom while living in the most infamous slave jail in Virginia. Born on a plantation in Charles City, Virginia, Pheby Delores Brown has lived a relatively sheltered life. Shielded by her mother’s position as the estate’s medicine woman and cherished by the Master’s sister, she is set apart from the others on the plantation, belonging to neither world. She’d been promised freedom on her eighteenth birthday, but instead of the idyllic life she imagined with her true love, Essex Henry, Pheby is forced to leave the only home she has ever known. She unexpectedly finds herself thrust into the bowels of slavery at the infamous Devil’s Half Acre, a jail in Richmond, Virginia, where the enslaved are broken, tortured, and sold every day. There, Pheby is exposed not just to her Jailer’s cruelty but also to his contradictions. To survive, Pheby will have to outwit him, and she soon faces the ultimate sacrifice.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781982149116"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1982149116"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 288,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 16,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=dxJSEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=dxJSEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=dxJSEAAAQBAJ&printsec=frontcover&dq=isbn:9781982149116&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=dxJSEAAAQBAJ&dq=isbn:9781982149116&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Yellow_Wife.html?hl=&id=dxJSEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=dxJSEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Born on a plantation but set apart from the others by her mother&#39;s position as a medicine woman, a young slave is forced to leave home at eighteen and unexpectedly finds herself in an infamously cruel jail."
+      }
+    }
+  ]
+}

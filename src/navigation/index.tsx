@@ -16,7 +16,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import AddBookScreen from "../screens/AddBookScreen";
-// import TabTwoScreen from '../screens/TabTwoScreen';
+import BookPreviewScreen from "../screens/BookPreviewScreen";
 import BookListScreen from "../screens/BookListScreen";
 import {
   RootStackParamList,
@@ -53,6 +53,11 @@ function RootNavigator() {
         name="Root"
         component={BottomTabNavigator}
         options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BookPreview"
+        component={BookPreviewScreen}
+        options={{ title: "Book Preview" }}
       />
       <Stack.Screen
         name="NotFound"

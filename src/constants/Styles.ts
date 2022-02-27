@@ -10,7 +10,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
+  image: {
+    height: 300,
+    width: 200,
+    resizeMode: "stretch"
+  },
+  scrollView: {
+    marginHorizontal: 10,
+  },
   title: {
     fontSize: 20,
     fontWeight: "bold",

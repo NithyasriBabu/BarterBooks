@@ -5,11 +5,14 @@ import { BarCodeScanner } from "expo-barcode-scanner";
 
 import styles from "../constants/Styles";
 
-import { StyleSheet } from "react-native";
+type BarCodeScannerViewProps = {
+  onScanSuccess: Function;
+};
 
-const BarCodeScannerView = () => {
-  console.log(StyleSheet.absoluteFillObject);
+const BarCodeScannerView = (props: BarCodeScannerViewProps) => {
+  const { onScanSuccess } = props;
   const [hasPermission, setHasPermission] = useState<Boolean | null>(null);
+  const [scanOn, setScanOn] = useState<Boolean>(true);
   const [scanned, setScanned] = useState<Boolean>(false);
 
   const getPermission = async () => {
@@ -21,9 +24,14 @@ const BarCodeScannerView = () => {
     getPermission();
   }, []);
 
-  const handleBarCodeScanned = ({ type, data }) => {
+  type BarCodeScannedType = {
+    type: string;
+    data: string;
+  };
+
+  const handleBarCodeScanned = ({ type, data }: BarCodeScannedType) => {
     setScanned(true);
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    onScanSuccess(data);
   };
 
   const BarCodeScannerContent = () => {
@@ -42,18 +50,25 @@ const BarCodeScannerView = () => {
             onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
             style={{ ...styles.barCodeArea, ...styles.container }}
           />
-          {scanned && (
-            <Button
-              title={"Tap to Scan Again"}
-              onPress={() => setScanned(false)}
-            />
-          )}
         </>
       );
     }
   };
 
-  return <View style={styles.container}>{BarCodeScannerContent()}</View>;
+  return (
+    <View style={styles.container}>
+      {BarCodeScannerContent()}
+      {!scanOn && (
+        <Button
+          title={"Tap to Scan a Book"}
+          onPress={() => {
+            setScanOn(true);
+            setScanned(false);
+          }}
+        />
+      )}
+    </View>
+  );
 };
 
 export default BarCodeScannerView;
