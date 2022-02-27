@@ -1,19 +1,16 @@
+import React from "react";
 import { StyleSheet } from "react-native";
 
 import { Text, View } from "../components/Themed";
+import { RootTabScreenProps } from "../../types";
 
-export default function TabTwoScreen() {
+const BookListScreen = ({ navigation }: RootTabScreenProps<"BookList">) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+      <Text style={styles.title}>Book List</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -31,3 +28,5 @@ const styles = StyleSheet.create({
     width: "80%",
   },
 });
+
+export default BookListScreen;
