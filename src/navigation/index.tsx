@@ -16,6 +16,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import AddBookScreen from "../screens/AddBookScreen";
+import BarCodeScannerScreen from "../screens/BarcodeScannerScreen";
 import BookPreviewScreen from "../screens/BookPreviewScreen";
 import BookListScreen from "../screens/BookListScreen";
 import {
@@ -24,6 +25,7 @@ import {
   RootTabScreenProps,
 } from "../../types";
 import LinkingConfiguration from "./LinkingConfiguration";
+import AddToCollectionScreen from "../screens/AddToCollectionScreen";
 
 export default function Navigation({
   colorScheme,
@@ -55,9 +57,25 @@ function RootNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="ScanBook"
+        component={BarCodeScannerScreen}
+        options={{ title: "Scan Your Book", headerBackTitleVisible: true }}
+      />
+      <Stack.Screen
+        name="AddToCollection"
+        component={AddToCollectionScreen}
+        options={{
+          title: "Add Book To Your Collection",
+          headerBackTitleVisible: true,
+        }}
+      />
+      <Stack.Screen
         name="BookPreview"
         component={BookPreviewScreen}
-        options={{ title: "Book Preview" }}
+        options={{
+          title: "Book Preview",
+          headerBackTitleVisible: true,
+        }}
       />
       <Stack.Screen
         name="NotFound"
@@ -95,21 +113,6 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarMaterialIcon name="bookshelf" color={color} />
           ),
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate("Modal")}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}
-            >
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
         })}
       />
       <BottomTab.Screen
@@ -122,16 +125,16 @@ function BottomTabNavigator() {
           ),
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate("Modal")}
+              onPress={() => navigation.push("ScanBook")}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}
             >
-              <FontAwesome
-                name="info-circle"
+              <MaterialCommunityIcons
+                name="barcode-scan"
                 size={25}
-                color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
+                color={Colors[colorScheme].text}
               />
             </Pressable>
           ),

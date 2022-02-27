@@ -1,55 +1,95 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import styles from "../constants/Styles";
 
-import { Button, Text, View } from "../components/Themed";
-import { RootTabScreenProps, BookPreviewType } from "../../types";
-import BarCodeScannerView from "./BarcodeScannerView";
+import { TextInput } from "react-native";
+import { useForm, Controller } from "react-hook-form";
 
-import axios from "axios";
+import { Button, View } from "../components/Themed";
+import { RootTabScreenProps } from "../../types";
+import useFetchBook from "../hooks/useFetchBook";
+
 import { AppLoading } from "./AppLoading";
+import { Light } from "../constants/Colors";
 
 export default function AddBook({ navigation }: RootTabScreenProps<"AddBook">) {
-  const [loading, setIsLoading] = useState<Boolean>(false);
-  const [scanOn, setScanOn] = useState<Boolean>(false);
-  const [bookData, setBookData] = useState<BookPreviewType>(undefined);
+  const { fetching, bookData, fetchBookData } = useFetchBook();
+  const { control, handleSubmit } = useForm({ mode: "onBlur" });
+  const fields = [
+    {
+      name: "intitle",
+      placeholder: "Search with title or parital title",
+      defaultValue: "",
+    },
+    {
+      name: "inauthor",
+      placeholder: "Search with author name",
+      defaultValue: "",
+    },
+    {
+      name: "inpublisher",
+      placeholder: "Search with publisher name",
+      defaultValue: "",
+    },
+    {
+      name: "subject",
+      placeholder: "Search the book's premise",
+      defaultValue: "",
+    },
+    {
+      name: "isbn",
+      placeholder: "Enter your book's ISBN here",
+      defaultValue: "",
+    },
+  ];
 
-  const url = "https://www.googleapis.com/books/v1/volumes?q=";
-
-  const fetchBook = (data: string) => {
-    setIsLoading(true);
-    setScanOn(false);
-    axios
-      .get(url + "isbn:" + data)
-      .then((response) => {
-        setIsLoading(false);
-        console.log("Scan Success");
-        return response.data;
-      })
-      .then((data) => {
-        setBookData(data?.items[0]);
-        navigation.push("BookPreview", { bookData });
-      })
-      .catch((error) => {
-        alert(`Unable to find the book.`);
-      });
+  type formSubmitType = {
+    intitle?: string;
+    inauthor?: string;
+    inpublisher?: string;
+    subject?: string;
+    isbn?: string;
   };
 
-  if (loading) {
-    return <AppLoading />;
-  }
+  const onSubmit = (data: formSubmitType) => {
+    fetchBookData(
+      Object.entries(data)
+        .filter(([_, value]) => value !== undefined || "")
+        .map(([key, value]) => ({ key: key, value: value ? value : "" }))
+    );
+  };
+
+  useEffect(() => {
+    if (!fetching && bookData) {
+      console.log("AddBook", bookData.id);
+      navigation.push("BookPreview", { bookData });
+    }
+  }, [fetching, bookData]);
+
+  if (fetching) return <AppLoading />;
+
+  const fieldList = fields.map((field) => (
+    <Controller
+      key={field.name}
+      control={control}
+      name={field.name}
+      render={({ field: { onChange, value, onBlur } }) => (
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={Light.text}
+          placeholder={field.placeholder}
+          value={value}
+          onBlur={onBlur}
+          onChangeText={(value) => onChange(value)}
+        />
+      )}
+    />
+  ));
 
   return (
     <View style={styles.container}>
-      {scanOn && <BarCodeScannerView onScanSuccess={fetchBook} />}
-      <View style={styles.container}>
-        <View style={styles.separator} />
-        <Text style={styles.title}>Add your Book</Text>
-        <View style={styles.separator} />
-        <View style={styles.container}>
-          <Button title="Tap to Scan a Book" onPress={() => setScanOn(true)} />
-          <Button title="Add a Book Manually" onPress={() => {}} />
-        </View>
-      </View>
+      {fieldList}
+      <View style={styles.separator}></View>
+      <Button title="Search my Book" onPress={handleSubmit(onSubmit)} />
     </View>
   );
 }

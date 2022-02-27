@@ -1,17 +1,15 @@
-import { Button, Text, View } from "../components/Themed";
+import { Text, View } from "../components/Themed";
 import { Image, ScrollView } from "react-native";
 import styles from "../constants/Styles";
-import { RootTabScreenProps } from "../../types";
+import { BookPreviewType } from "../../types";
 
-const BookPreviewScreen = ({
-  route,
-  navigation,
-}: RootTabScreenProps<"BookPreview">) => {
-  const { bookData } = route.params;
+const BookPreviewScreen = (props: { bookData: BookPreviewType }) => {
+  console.log("BookScreenProps", props);
+  const { bookData } = props;
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
-        <Text style={styles.title}>{bookData?.volumeInfo?.title}</Text>
+        <Text style={styles.title}>{bookData.volumeInfo?.title}</Text>
         <View style={styles.separator} />
         <Image
           style={styles.image}
@@ -22,7 +20,6 @@ const BookPreviewScreen = ({
         <View style={styles.separator} />
         <Text style={styles.title}>{bookData?.searchInfo?.textSnippet}</Text>
         <View style={styles.separator} />
-        <Button title={"Add to Your Collection"} onPress={() => {}} />
       </View>
     </ScrollView>
   );

@@ -17,39 +17,41 @@ declare global {
 }
 
 export type BookPreviewType = {
-  bookData: {
-    kind: string;
-    volumeInfo: {
-      title: string;
-      subtitle: string;
-      authors: [string];
-      publishedDate: string;
-      description: string;
-      industryIdentifiers: [
-        {
-          type: string;
-          identifier: string;
-        }
-      ];
-      pageCount: number;
-      categories: [string];
-      averageRating: number;
-      ratingsCount: number;
-      imageLinks: {
-        smallThumbnail: string;
-        thumbnail: string;
-      };
-      language: string;
+  kind: string;
+  id: string;
+  volumeInfo: {
+    title: string;
+    subtitle: string;
+    authors: string[];
+    publisher: string;
+    publishedDate: string;
+    description: string;
+    industryIdentifiers: {
+      type: string;
+      identifier: string;
+    }[];
+    pageCount: number;
+    categories: string[];
+    averageRating: number;
+    ratingsCount: number;
+    imageLinks: {
+      smallThumbnail: string;
+      thumbnail: string;
     };
-    searchInfo: {
-      textSnippet: string;
-    };
+    language: string;
+  };
+  searchInfo: {
+    textSnippet: string;
   };
 };
 
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  ScanBook: undefined;
   BookPreview: {
+    bookData: BookPreviewType;
+  };
+  AddToCollection: {
     bookData: BookPreviewType;
   };
   Modal: undefined;
@@ -61,6 +63,7 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
 
 export type RootTabParamList = {
   AddBook: undefined;
+  ScanBook: undefined;
   BookList: undefined;
   BookPreview: BookPreviewType;
 };

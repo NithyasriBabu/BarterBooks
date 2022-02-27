@@ -1,0 +1,135 @@
+{
+  "books": [
+    {
+      "kind": "books#volume",
+      "id": "dxJSEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Yellow Wife",
+        "subtitle": "A Novel",
+        "authors": ["Sadeqa Johnson"],
+        "publisher": "Simon and Schuster",
+        "publishedDate": "2021-12-28",
+        "description": "Called “wholly engrossing” by New York Times bestselling author Kathleen Grissom, this “fully immersive” (Lisa Wingate, #1 bestselling author of Before We Were Yours) story follows an enslaved woman forced to barter love and freedom while living in the most infamous slave jail in Virginia. Born on a plantation in Charles City, Virginia, Pheby Delores Brown has lived a relatively sheltered life. Shielded by her mother’s position as the estate’s medicine woman and cherished by the Master’s sister, she is set apart from the others on the plantation, belonging to neither world. She’d been promised freedom on her eighteenth birthday, but instead of the idyllic life she imagined with her true love, Essex Henry, Pheby is forced to leave the only home she has ever known. She unexpectedly finds herself thrust into the bowels of slavery at the infamous Devil’s Half Acre, a jail in Richmond, Virginia, where the enslaved are broken, tortured, and sold every day. There, Pheby is exposed not just to her Jailer’s cruelty but also to his contradictions. To survive, Pheby will have to outwit him, and she soon faces the ultimate sacrifice.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781982149116"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1982149116"
+          }
+        ],
+        "pageCount": 288,
+        "categories": ["Fiction"],
+        "averageRating": 4,
+        "ratingsCount": 16,
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=dxJSEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=dxJSEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en"
+      },
+      "searchInfo": {
+        "textSnippet": "Born on a plantation but set apart from the others by her mother&#39;s position as a medicine woman, a young slave is forced to leave home at eighteen and unexpectedly finds herself in an infamously cruel jail."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "9e_T7URNmV8C",
+      "volumeInfo": {
+        "title": "Ransom",
+        "authors": ["Danielle Steel"],
+        "publisher": "Random House Digital, Inc.",
+        "publishedDate": "2004",
+        "description": "A violent crime brings together four people, including a widow, a convicted murder, an ex-con trying to rebuild his life, and a detective, in a novel that explores the effects of violence on the lives of ordinary people.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780385336321"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0385336322"
+          }
+        ],
+        "pageCount": 325,
+        "categories": ["Fiction"],
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=9e_T7URNmV8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=9e_T7URNmV8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en"
+      },
+      "searchInfo": {
+        "textSnippet": "A violent crime brings together four people, including a widow, a convicted murder, an ex-con trying to rebuild his life, and a detective, in a novel that explores the effects of violence on the lives of ordinary people."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "2pgNygEACAAJ",
+      "volumeInfo": {
+        "title": "Why We Sleep",
+        "subtitle": "Unlocking the Power of Sleep and Dreams",
+        "authors": ["Matthew Walker"],
+        "publisher": "Scribner",
+        "publishedDate": "2018-06-19",
+        "description": "“Why We Sleep is an important and fascinating book…Walker taught me a lot about this basic activity that every person on Earth needs. I suspect his book will do the same for you.” —Bill Gates A New York Times bestseller and international sensation, this “stimulating and important book” (Financial Times) is a fascinating dive into the purpose and power of slumber. With two appearances on CBS This Morning and Fresh Air's most popular interview of 2017, Matthew Walker has made abundantly clear that sleep is one of the most important but least understood aspects of our life. Until very recently, science had no answer to the question of why we sleep, or what good it served, or why we suffer such devastating health consequences when it is absent. Compared to the other basic drives in life—eating, drinking, and reproducing—the purpose of sleep remains more elusive. Within the brain, sleep enriches a diversity of functions, including our ability to learn, memorize, and make logical decisions. It recalibrates our emotions, restocks our immune system, fine-tunes our metabolism, and regulates our appetite. Dreaming creates a virtual reality space in which the brain melds past and present knowledge, inspiring creativity. In this “compelling and utterly convincing” (The Sunday Times) book, preeminent neuroscientist and sleep expert Matthew Walker provides a revolutionary exploration of sleep, examining how it affects every aspect of our physical and mental well-being. Charting the most cutting-edge scientific breakthroughs, and marshalling his decades of research and clinical practice, Walker explains how we can harness sleep to improve learning, mood and energy levels, regulate hormones, prevent cancer, Alzheimer’s and diabetes, slow the effects of aging, and increase longevity. He also provides actionable steps towards getting a better night’s sleep every night. Clear-eyed, fascinating, and accessible, Why We Sleep is a crucial and illuminating book. Written with the precision of Atul Gawande, Andrew Solomon, and Sherwin Nuland, it is “recommended for night-table reading in the most pragmatic sense” (The New York Times Book Review).",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1501144324"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781501144325"
+          }
+        ],
+        "pageCount": 368,
+        "categories": ["Science"],
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=2pgNygEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=2pgNygEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en"
+      },
+      "searchInfo": {
+        "textSnippet": "Until very recently, science had no answer to the question of why we sleep, or what good it served, or why we suffer such devastating health consequences when it is absent."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "p2fIlgEACAAJ",
+      "volumeInfo": {
+        "title": "Mr. Penumbra's 24-Hour Bookstore",
+        "subtitle": "A Novel",
+        "authors": ["Robin Sloan"],
+        "publisher": "Picador",
+        "publishedDate": "2013-09-24",
+        "description": "A Winner of the Alex Award, a finalist for the Los Angeles Times Book Prize for First Fiction, named a Best Book of the Year by NPR, Los Angeles Times, and San Francisco Chronicle The Great Recession has shuffled Clay Jannon away from life as a San Francisco web-design drone and into the aisles of Mr. Penumbra's 24-Hour Bookstore. But after a few days on the job, Clay discovers that the store is more curious than either its name or its gnomic owner might suggest. The customers are few, and they never seem to buy anything--instead, they \"check out\" large, obscure volumes from strange corners of the store. Suspicious, Clay engineers an analysis of the clientele's behavior, seeking help from his variously talented friends. But when they bring their findings to Mr. Penumbra, they discover the bookstore's secrets extend far beyond its walls. Rendered with irresistible brio and dazzling intelligence, Robin Sloan's Mr. Penumbra's 24-Hour Bookstore is exactly what it sounds like: an establishment you have to enter and will never want to leave.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1250037751"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781250037756"
+          }
+        ],
+        "pageCount": 304,
+        "categories": ["Fiction"],
+        "averageRating": 4,
+        "ratingsCount": 387,
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=p2fIlgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=p2fIlgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en"
+      },
+      "searchInfo": {
+        "textSnippet": "Rendered with irresistible brio and dazzling intelligence, Robin Sloan&#39;s Mr. Penumbra&#39;s 24-Hour Bookstore is exactly what it sounds like: an establishment you have to enter and will never want to leave."
+      }
+    }
+  ]
+}
